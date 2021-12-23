@@ -17,7 +17,7 @@ def building_socket():
         global sock
         host = ""  # THE IP address of the server should be added here
         port_number = 6666
-        sock = socket.socket()   # function used to create socket
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   # function used to create socket
     except socket.error as msg:  # the error will be stored as message and it will be converted to str
         print("Error in creating the socket: " + str(msg))
 
